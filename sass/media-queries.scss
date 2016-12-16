@@ -1,13 +1,37 @@
 @import './variables';
+@import './mixins';
 
 @media screen and (min-width: 600px){
-  .block_family li{
-   background-color: $globalLight;
-   color: $globalDark;
+  h1{
+   @include block_font(55px, $globalLight);
+  }
+  h2{
+   @include block_font(35px, $globalBright);
+   text-align: center;
+  }
+  .block_family{
+    max-width: 500px;
+    li {
+      background-color: $globalLight;
+    }
   }
 
 }
 @media screen and (min-width: 900px) {
-
-
+  body{
+    background-color: $globalDark;
+  }
+  h1{
+     @include block_font(55px, $globalBright);
+    }
+    h2{
+     @include block_font(35px, $globalDark);
+     text-align: center;
+    }
+    .block_family{
+      max-width: 800px;
+      li {
+        background-color: $globalBright;
+      }
+    }
 }
