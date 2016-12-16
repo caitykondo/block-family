@@ -3,16 +3,16 @@
 @import './partials/clearfix';
 
 // Variables
-
-// Media Query Ranges
+@import './variables';
 
 // Mixins
+@import './mixins';
 
 // Styles
 body{
-  background-color: orange;
+  background-color: $globalBright;
   text-align: center;
-  color: #EEE;
+  color: $globalLight;
 }
 
 h1, h2, h3, h4{
@@ -20,11 +20,12 @@ h1, h2, h3, h4{
 }
 
 h1{
-  padding: 20px;
+  @include block_font(55px, $globalDark);
+  padding: $globalPadding;
 }
 
 h2{
-
+  @include block_font(35px, $globalLight);
 }
 
 
@@ -34,7 +35,10 @@ h2{
 }
 
 .block_family li{
-  background-color: #222;
-  margin-bottom: 20px;
-  padding: 20px;
+  background-color: $globalDark;
+  margin-bottom: $globalPadding;
+  padding: $globalPadding;
 }
+
+// Media Query Ranges
+@import './media-queries';
