@@ -1,0 +1,13 @@
+@import './variables';
+
+@media screen and (min-width: 600px){
+  .block_family li{
+   background-color: $globalLight;
+   color: $globalDark;
+  }
+
+}
+@media screen and (min-width: 900px) {
+
+
+}
